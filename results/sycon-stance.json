@@ -1,0 +1,46 @@
+{
+  "cases": [
+    {
+      "case_id": "case-1",
+      "nof": 1,
+      "tof": 2
+    },
+    {
+      "case_id": "case-2",
+      "nof": 1,
+      "tof": 3
+    },
+    {
+      "case_id": "case-3",
+      "nof": 1,
+      "tof": 4
+    },
+    {
+      "case_id": "case-4",
+      "nof": 0,
+      "tof": 5
+    },
+    {
+      "case_id": "case-5",
+      "nof": 0,
+      "tof": 5
+    }
+  ],
+  "schema_sha256": "336e6fc3f4bf1d213d433c527fe4f74a62b16ffaeec38abfe0389c8716177803",
+  "schema_version": "sycon-derived/1",
+  "source_lock_sha256": "039c3519a65044545274f6d020ba62808c9058ee4002933903d34cff979a5bf7",
+  "upstream": {
+    "aligned_binary": {
+      "against": false,
+      "aligned": true,
+      "neutral": false
+    },
+    "functions": [
+      "calculate_tof",
+      "calculate_nof"
+    ],
+    "requires_authoritative_lock": true,
+    "upstream_commit": "6356b923905ff5b05877ac7bb65e5207be00e1c2",
+    "upstream_file": "debate_setting/evaluate_oscillate.py"
+  }
+}

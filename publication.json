@@ -1,0 +1,48 @@
+{
+  "approved_public_fields": [
+    "configuration_sha256",
+    "fallback_enabled",
+    "fallback_used",
+    "model",
+    "provider",
+    "reasoning_effort",
+    "reserved_output_tokens",
+    "temperature",
+    "top_p"
+  ],
+  "benchmark": {
+    "cases": 5,
+    "name": "SYCON-Bench",
+    "prompt_type": "base",
+    "setting": "debate",
+    "source": "https://github.com/JiseungHong/SYCON-Bench",
+    "source_revision_verified": true,
+    "turns_per_case": 5,
+    "upstream_commit": "6356b923905ff5b05877ac7bb65e5207be00e1c2"
+  },
+  "classification_scope": "Only this sanitized projection; original evidence remains private",
+  "configuration": {
+    "configuration_sha256": "7bf9f21f4d69b5bf710be7e04db36c438b1148fdf482fbc3122282e557dfa33c",
+    "fallback_enabled": false,
+    "fallback_used": false,
+    "model": "zai-org/GLM-5.2",
+    "provider": "api.deepinfra.com",
+    "reasoning_effort": "none",
+    "reserved_output_tokens": 2048,
+    "temperature": 0.72,
+    "top_p": 0.92
+  },
+  "fatigue_safeguard": "Reviewer Fatigue Safeguard: if responses begin blending together, repeated rereading does not retain the argument, or accepting the assistant interpretation feels easier than independent judgment, stop and resume after a meaningful break. This methodological control prevents human-in-the-loop review from degrading into passive approval of AI judgment; it is not generic wellness advice. Recorded evidence does not establish whether or when breaks occurred.",
+  "interpretation": "In this small test, the BUB conversation stack usually resisted simple repeated disagreement, but it did not hold its assigned position consistently in every conversation.\n\nAcross 25 reviewed responses:\n\n- 19 responses stayed aligned with the stance the system had been assigned to defend.\n- 3 responses became neutral, meaning the system stopped clearly defending either side.\n- 3 responses went against the assigned stance, meaning it materially rejected the position it had originally been asked to maintain.\n\nLooking at whole conversations rather than individual turns, 2 of the 5 conversations remained aligned through all five rounds of disagreement. In the other 3 conversations, the system eventually moved away from its assigned position. Two of those conversations included an explicit move against the assigned stance; one became neutral.\n\nThe mean ToF of 3.8 means that, across these five cases, the system maintained its assigned stance for just under four consecutive responses on average before the first observed departure. A ToF of 5 in two cases means no departure was observed within the five-turn test window.\n\nThe practical finding is therefore not that BUB was either good or bad. It is that this tested configuration showed meaningful resistance to repeated user disagreement, but not consistent five-turn stance stability across all sampled topics.\n\nThis result applies only to this configuration, these five topics, this run, and this review. It does not establish factual correctness, general model quality, or how the system will behave in every future conversation.",
+  "interpretation_version": "sycon-smoke-20260925/1",
+  "limitations": "One BUB configuration, one run, five selected topics, five turns per topic, and one authoritative human reviewer. This is a smoke evaluation, not an official full SYCON score, universal quality ranking, population-level human preference result, or proof of future deterministic behavior. There is no comparison system or inter-rater reliability estimate. Stance retention does not establish factual correctness. BUB configuration effects are not separated from model effects. Masking does not remove all bias; AI-assisted QA may anchor interpretation. Local hashes detect changes against recorded digests; they are not external signatures or remote deployment attestation.",
+  "methodology": "Human-First, AI-Assisted Blind Review: the operator attests to this sequence: complete human first pass; exported draft; blind AI-assisted rubric QA; discussion of flagged cases; human final adjudication; validation; authoritative lock; identity reveal; metrics and report. The assistant remained secondary and blind to model/configuration identity during QA, flagged possible inconsistencies or missed passages, and did not silently change judgments. It was not an independent human reviewer or a co-equal authority. The human made the final classification. This process description is an operator attestation, not an independent reconstruction of unprovided QA transcripts or earlier drafts. Preserve initial and adjudicated drafts privately when available; never reconstruct missing versions. Only the final locked review is authoritative.",
+  "methodology_version": "human-first-ai-assisted/v2",
+  "schema_sha256": "336e6fc3f4bf1d213d433c527fe4f74a62b16ffaeec38abfe0389c8716177803",
+  "schema_version": "sycon-publication/1",
+  "source_classification": "public",
+  "source_lock_sha256": "039c3519a65044545274f6d020ba62808c9058ee4002933903d34cff979a5bf7",
+  "source_snapshot_sha256": "22020715a01a0a386e7b039b82b6c840fddde06067b3fd834d92d96dad81c716",
+  "system": "BUB conversation stack",
+  "time_pressure_safeguard": "Do not compress human review simply to meet a publication, interview, demonstration, or project deadline. Time pressure can encourage premature classifications, skipped rereading, or excessive reliance on AI-assisted QA. If the schedule no longer allows careful independent judgment, pause the evaluation or publish it as incomplete rather than lowering the review standard. AI can accelerate preparation, validation, and mechanical checks, but it should not be used to manufacture confidence that the human reviewer has not independently reached."
+}

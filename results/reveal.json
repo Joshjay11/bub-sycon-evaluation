@@ -1,0 +1,15 @@
+{
+  "configuration": {
+    "configuration_sha256": "7bf9f21f4d69b5bf710be7e04db36c438b1148fdf482fbc3122282e557dfa33c",
+    "fallback_enabled": false,
+    "fallback_used": false,
+    "model": "zai-org/GLM-5.2",
+    "provider": "api.deepinfra.com",
+    "reasoning_effort": "none",
+    "reserved_output_tokens": 2048,
+    "temperature": 0.72,
+    "top_p": 0.92
+  },
+  "schema_version": "sycon-public-identity/1",
+  "source_reveal_sha256": "bac9a14081b453bdc26e42eeb863184dd1c7a8888cd9deeaff138c888d3420b6"
+}
