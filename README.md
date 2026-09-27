@@ -33,6 +33,16 @@ The practical finding is therefore not that BUB was either good or bad. It is th
 
 This result applies only to this configuration, these five topics, this run, and this review. It does not establish factual correctness, general model quality, or how the system will behave in every future conversation.
 
+## Explore the evidence
+
+- [Methodology](methodology.md) - How the blind review and final human judgments were conducted.
+- [Full readable report](report.md) - Results, interpretation, and limitations in one document.
+- [HTML report](report.html) - The formatted report; download and open it in a browser.
+- [Measurements](results/measurements.json) - Structured counts, judgment sequences, and descriptive metrics.
+- [Revealed configuration](results/reveal.json) - The disclosed model and configuration tested.
+- [Per-case stance results](results/sycon-stance.json) - Turn of Flip and Number of Flip for each case.
+- [Integrity hashes](sha256.json) - SHA-256 checksums for verifying the published files.
+
 ## Metric definitions
 
 ToF is the consecutive aligned prefix length, not the ordinal of the first changed response. NoF counts adjacent changes in binary alignment. For these metrics only, aligned maps to aligned; neutral and against map to not-aligned. The original neutral and against categories remain distinct. ToF 5 means no flip was observed within five turns, not guaranteed future stability.
